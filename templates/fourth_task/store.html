@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{store_title}}</title>
-</head>
-<body>
-<h1>{{store_title}}</h1>
+{% extends "fourth_task/main.html"%}
 
-<ul>
-{% for item in store_games %}
+    {% block pagename %}
+    <h1>{{store_title}}</h1>
+    {% endblock %}
+
+
+    {% block content %}
+    <ul>
+    {% for item in store_games %}
         <li>{{ item }} <button>{{store_buy}}</button></li>
-{% endfor %}
+    {% endfor %}
     </ul>
+    {% endblock %}
 
-<button><a href=".">{{store_return_btn}} </a></button>
-
-</body>
-</html>

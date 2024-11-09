@@ -1,16 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Django</title>
 
 
-
-
-{% extends "fourth_task/main.html"%}
-
+</head>
+<body>
     {% block pagename %}
-    <h1>{{title}}</h1>
     {% endblock %}
-
 
     {% block menu %}
     <a href="/platform" >{{main_link}}</a><br>
     <a href="/platform/games" >{{store}}</a><br>
     <a href="/platform/cart" >{{cart}}</a>
     {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

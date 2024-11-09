@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{cart_lang}}</title>
-</head>
-<body>
-<h1>{{cart_lang}}</h1>
+{% extends "fourth_task/main.html"%}
 
-<ul>
-{% for item in universal_langs %}
-        <li>
-
-    <a href="?lang={{ item }}">{{ item }}</a><br>
-
-        </li>
-
-{% endfor %}
-    </ul>
-
-<br>
-<br>
-<button><a href=".">{{store_return_btn}} </a></button>
+    {% block pagename %}
+    <h1>{{cart_lang}}</h1>
+    {% endblock %}
 
 
-</body>
-</html>
+    {% block content %}
+        <ul>
+        {% for item in universal_langs %}
+            <li>
+
+                <a href="?lang={{ item }}">{{ item }}</a><br>
+
+            </li>
+
+        {% endfor %}
+        </ul>
+    {% endblock %}
+
+
