@@ -18,13 +18,6 @@ def get_info(object, print=False):
 
     return return_list
 
-
-def index(request): #choose the layout by index выбери представление через индекс
-    view = [sign_up_by_html, sign_up_by_django]
-
-    return view[1](request)
-
-
 def carry_on(data=None, request=None, form=None):
     username = False
     password = False
